@@ -110,3 +110,23 @@ color = true
 ```
 sudo systemctl start parity
 ```
+
+### 5. 访问命令控制台
+
+    访问命令控制台的前提是该机器安装了geth钱包，相关安装方式这里不再描述
+
+```
+geth attach http://127.0.0.1:9988  # 端口号可在配置文件中修改，修改后需要重启服务
+```
+
+### 6. 使用 rpc 协议访问 parity 接口
+
+```
+# 查看当前的节点数量
+
+curl --data '{"method":"net_peerCount","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:9988
+
+# 查看当前的同步状态
+
+curl --data '{"method":"eth_syncing","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:9988
+```

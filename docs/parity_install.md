@@ -103,3 +103,10 @@ logging = "own_tx=trace"
 log_file = "/var/log/parity.log"
 color = true
 ```
+
+
+### 4. 启动服务
+
+```
+sudo systemctl start parity
+```

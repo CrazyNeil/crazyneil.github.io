@@ -29,6 +29,7 @@ sudo systemctl enable parity
 ### 3. 配置文件
 
     在 /etc/parity 目录中添加配置文件 config.toml 
+    配置生成器：https://paritytech.github.io/parity-config-generator/
 
 
 ```bash

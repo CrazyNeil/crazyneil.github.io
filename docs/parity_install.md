@@ -1,3 +1,5 @@
+**[首页](https://crazyneil.github.io)** > parity 简明安装
+
 ### 1. 安装 Parity
 
     建议安装稳定版，并在配置文件中设置更新规则，确保关键更新被自动安装

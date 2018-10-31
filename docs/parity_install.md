@@ -2,7 +2,7 @@
 
     建议安装稳定版，并在配置文件中设置更新规则，确保关键更新被自动安装
 
-```
+```bash
 # 命令行安装稳定版
 bash <(curl https://get.parity.io -L) -r stable
 
@@ -15,7 +15,7 @@ bash <(curl https://get.parity.io -L)
 
     默认情况下系统没有安装parity的相关启停服务，需要手动进行安装配置
 
-```
+```bash
 sudo wget https://raw.githubusercontent.com/paritytech/parity-ethereum/master/scripts/parity.service -O /etc/systemd/system/parity.service
 
 sudo chmod +x /etc/systemd/system/parity.service
@@ -29,7 +29,7 @@ sudo systemctl enable parity
     在 /etc/parity 目录中添加配置文件 config.toml 
 
 
-```
+```bash
 # This config should be placed in following path:
 #   ~/.local/share/io.parity.ethereum/config.toml
 
@@ -107,7 +107,7 @@ color = true
 
 ### 4. 启动服务
 
-```
+```bash
 sudo systemctl start parity
 ```
 
@@ -115,13 +115,13 @@ sudo systemctl start parity
 
     访问命令控制台的前提是该机器安装了geth钱包，相关安装方式这里不再描述
 
-```
+```bash
 geth attach http://127.0.0.1:9988  # 端口号可在配置文件中修改，修改后需要重启服务
 ```
 
 ### 6. 使用 rpc 协议访问 parity 接口
 
-```
+```bash
 # 查看当前的节点数量
 
 curl --data '{"method":"net_peerCount","params":[],"id":1,"jsonrpc":"2.0"}' -H "Content-Type: application/json" -X POST localhost:9988

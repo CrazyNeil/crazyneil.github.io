@@ -29,6 +29,7 @@ sudo systemctl enable parity
 ### 3. 配置文件
 
     在 /etc/parity 目录中添加配置文件 config.toml 
+    配置生成器：https://paritytech.github.io/parity-config-generator/
 
 
 ```bash
@@ -77,9 +78,10 @@ reserved_only = false
 # JSON-RPC over HTTP will be accessible on port 9988.
 port = 9988
 disable = false
-interface = "local"
-cors = []
-apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "traces", "rpc", "shh", "shh_pubsub"]
+interface = "0.0.0.0"
+# Allows Cross-Origin Requests from domain '*,'.
+cors = ["*", ""]
+apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "traces", "rpc", "shh", "shh_pubsub", "personal"]
 hosts = ["none"]
 
 [websockets]

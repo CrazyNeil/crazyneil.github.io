@@ -1,4 +1,4 @@
-**[首页](https://crazyneil.github.io)** > parity 简明安装
+**[首页](https://docs.workwithme.vip)** > parity 简明安装
 
 ### 1. 安装 Parity
 
@@ -63,7 +63,7 @@ min_peers = 25
 max_peers = 100
 nat = "any"
 id = 1
-bootnodes = []
+# bootnodes = []  # 该参数需要移除
 discovery = true
 warp = true
 allow_ips = "all"
@@ -93,12 +93,12 @@ hosts = ["none"]
 
 [ipc]
 disable = false
-path = "/mnt/parity/jsonrpc.ipc"
+path = "/data/parity/jsonrpc.ipc"
 apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "parity_accounts", "traces", "rpc", "shh", "shh_pubsub"]
 
 [dapps]
 disable = false
-path = "/mnt/parity/dapps"
+path = "/data/parity/dapps"
 
 [misc]
 logging = "own_tx=trace"

@@ -84,3 +84,5 @@ service zabbix-agent start
 
 访问：http://your-server-ip/zabbix  执行web安装
 默认账号：Admin 密码：zabbix 
+
+```

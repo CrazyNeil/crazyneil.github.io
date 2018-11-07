@@ -82,7 +82,12 @@ service zabbix-agent start
 
 # 注意打开 10050 默认端口，无论是 Server 还是 agent 所在的机器
 
-访问：http://your-server-ip/zabbix  执行web安装
-默认账号：Admin 密码：zabbix 
+访问：http://your-server-ip/zabbix  执行web安装进程
+安装完毕后默认账号：Admin 密码：zabbix 登陆进行后续操作
 
 ```
+
+### 3. 参考文档
+
+- [应用商店](https://share.zabbix.com)
+- [官方手册](https://www.zabbix.com/manuals)

@@ -73,21 +73,33 @@ DBPassword=<password>
 service zabbix-server start
 update-rc.d zabbix-server enable # 自动启动
 
-# 安装代理
-apt install zabbix-agent
-# 启动代理
-service zabbix-agent start
 
-# 代理配置文件中，需要将 server ip 配置为 zabbix server 所在服务器的IP ！！！！
-
-# 注意打开 10050 默认端口，无论是 Server 还是 agent 所在的机器
 
 访问：http://your-server-ip/zabbix  执行web安装进程
 安装完毕后默认账号：Admin 密码：zabbix 登陆进行后续操作
 
 ```
 
-### 3. 参考文档
+### 4. Agent 代理安装
+
+```bash
+# 安装代理
+apt install zabbix-agent
+# 编辑配置文件
+vim /etc/zabbix/zabbix_agentd.conf
+
+Server=your-zabbix-server-ip-addr
+ServerActive=your-zabbix-server-ip-addr
+Hostname=YOUR SERVER NAME # 在 zabbix server 中添加host的时候注意填写当前配置的主机名
+
+# 启动代理
+service zabbix-agent start
+
+# 注意打开 10050 默认端口，无论是 Server 还是 agent 所在的机器
+
+```
+
+### 4. 参考文档
 
 - [应用商店](https://share.zabbix.com)
 - [官方手册](https://www.zabbix.com/manuals)

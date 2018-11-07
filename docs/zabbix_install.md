@@ -82,6 +82,8 @@ update-rc.d zabbix-server enable # 自动启动
 
 ### 4. Agent 代理安装
 
+    Agent 需要安装在被监控的机器上，agent 是指server 主动向 agent 获取数据， agent active 是指 agent 向 Server 主动发送数据
+
 ```bash
 # 安装代理
 apt install zabbix-agent
@@ -99,7 +101,7 @@ service zabbix-agent start
 
 ```
 
-### 4. 参考文档
+### 5. 参考文档
 
 - [应用商店](https://share.zabbix.com)
 - [官方手册](https://www.zabbix.com/manuals)

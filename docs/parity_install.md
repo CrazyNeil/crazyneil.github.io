@@ -81,7 +81,7 @@ disable = false
 interface = "0.0.0.0"
 # Allows Cross-Origin Requests from domain '*,'.
 cors = ["*", ""]
-apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "traces", "rpc", "shh", "shh_pubsub", "personal"]
+apis = ["web3", "eth", "pubsub", "net", "parity", "parity_accounts", "parity_pubsub", "traces", "rpc", "shh", "shh_pubsub", "personal"]
 hosts = ["none"]
 
 [websockets]
